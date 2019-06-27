@@ -33,7 +33,7 @@ project {
 }
 
 object ConfigFromTemplate : BuildType({
-    templates(TemplateForParent)
+    
     name = "config from template"
 })
 
