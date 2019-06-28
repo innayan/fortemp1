@@ -31,5 +31,11 @@ changeBuildType(RelativeId("ConfigFromTemplate")) {
                 scriptContent = "3"
             }
         }
+        insert(3) {
+            script {
+                name = "4"
+                scriptContent = "4"
+            }
+        }
     }
 }
