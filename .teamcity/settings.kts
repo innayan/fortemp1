@@ -27,34 +27,12 @@ version = "2019.1"
 
 project {
 
-    buildType(ConfigFromTemplate)
+    
 
     subProject(Subproject2)
     subProject(Subproject1)
 }
 
-object ConfigFromTemplate : BuildType({
-    name = "config from template"
-
-    steps {
-        script {
-            name = "2"
-            scriptContent = "2"
-        }
-        script {
-            name = "3 copy"
-            scriptContent = "3"
-        }
-        script {
-            name = "1"
-            scriptContent = "1"
-        }
-        script {
-            name = "4"
-            scriptContent = "4"
-        }
-    }
-})
 
 
 object Subproject1 : Project({
