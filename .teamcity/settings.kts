@@ -38,12 +38,8 @@ project {
 object Subproject1 : Project({
     name = "subproject1"
 
-    buildType(Subproject1_Subpro1config)
 })
 
-object Subproject1_Subpro1config : BuildType({
-    name = "subpro1config"
-})
 
 
 object Subproject2 : Project({
