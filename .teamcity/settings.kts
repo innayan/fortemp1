@@ -29,13 +29,51 @@ project {
 
     buildType(ConfigFromTemplate)
 
-   
+    subProject(Subproject2)
+    subProject(Subproject1)
 }
 
 object ConfigFromTemplate : BuildType({
-    
     name = "config from template"
+
+    steps {
+        script {
+            name = "2"
+            scriptContent = "2"
+        }
+        script {
+            name = "3 copy"
+            scriptContent = "3"
+        }
+        script {
+            name = "1"
+            scriptContent = "1"
+        }
+        script {
+            name = "4"
+            scriptContent = "4"
+        }
+    }
 })
 
 
+object Subproject1 : Project({
+    name = "subproject1"
 
+    buildType(Subproject1_Subpro1config)
+})
+
+object Subproject1_Subpro1config : BuildType({
+    name = "subpro1config"
+})
+
+
+object Subproject2 : Project({
+    name = "subproject2"
+
+    buildType(Subproject2_Subpro2config)
+})
+
+object Subproject2_Subpro2config : BuildType({
+    name = "subpro2config"
+})
